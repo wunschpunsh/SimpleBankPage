@@ -32,10 +32,10 @@ document.addEventListener('keydown', function (evt) {
   }
 });
 
-const createModal = () => {
+const initializeModal = () => {
   btnsOpenModalWindow.forEach((item) => {
     item.addEventListener('click', onOpenModalClick);
   });
 };
 
-export {createModal};
+export {initializeModal};

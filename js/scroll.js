@@ -2,7 +2,7 @@ const buttonScrollTo = document.querySelector('.btn--scroll-to');
 const sectionScrollTo = document.querySelector('#section--1');
 const navLinks = document.querySelector('.nav__links');
 
-const scrollTo = () => {
+const initializeScrollTo = () => {
   buttonScrollTo.addEventListener('click', (evt) => {
     const sectionScrollToСoord = sectionScrollTo.getBoundingClientRect();
     window.scrollTo({
@@ -22,4 +22,4 @@ const scrollTo = () => {
   });
 };
 
-export {scrollTo};
+export {initializeScrollTo};
