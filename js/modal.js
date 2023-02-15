@@ -14,6 +14,7 @@ const onOpenModalClick = (evt) => {
   btnsOpenModalWindow.forEach((item) => {
     item.removeEventListener('click', onOpenModalClick);
   });
+  document.addEventListener('keydown', onCloseModalKeydown);
 };
 
 const onCloseModalClick = () => {
@@ -26,11 +27,12 @@ const onCloseModalClick = () => {
   });
 };
 
-document.addEventListener('keydown', function (evt) {
+const onCloseModalKeydown = (evt) => {
   if (evt.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
     onCloseModalClick();
+    document.removeEventListener('keydown', onCloseModalKeydown);
   }
-});
+};
 
 const initializeModal = () => {
   btnsOpenModalWindow.forEach((item) => {

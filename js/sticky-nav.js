@@ -17,8 +17,8 @@ const obsOptions = {
 };
 
 const initializeStickyNav = () => {
-  const observer = new IntersectionObserver(getStickyNav, obsOptions);
-  observer.observe(header);
+  const headerObserver = new IntersectionObserver(getStickyNav, obsOptions);
+  headerObserver.observe(header);
 };
 
 export {initializeStickyNav};
